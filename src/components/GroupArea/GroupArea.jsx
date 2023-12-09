@@ -3,8 +3,11 @@ import Logo from '../../assets/icons/Notes-Logo.svg'
 import styles from '../css/GroupArea.module.scss'
 import GroupName from './GroupName'
 
-function GroupArea() {
-    const [groups, setGroups] = useState([])
+function GroupArea({
+    groups,
+    openCreateGroup,
+}) {
+    
   return (
     <div className={styles.group_area}>
         <div className={styles.logo}>
@@ -20,7 +23,7 @@ function GroupArea() {
                 </div>
             ))}
         </div>
-        <button className={styles.add_group_button} title='Add Group'>+</button>
+        <button className={styles.add_group_button} title='Add Group' onClick={openCreateGroup}>+</button>
     </div>
   )
 }

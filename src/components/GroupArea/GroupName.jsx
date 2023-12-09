@@ -5,8 +5,8 @@ export default function GroupName({
     groupName,
     bgColor,
 }) {
-    const secondChar =  groupName.indexOf(" ");
-    const groupShort = groupName.charAt(0).toUpperCase() + (secondChar!=-1 ? groupName.charAt(secondChar+1).toUpperCase() : "");
+    const groupSplit = groupName.split(/[ ]+/);
+    const groupShort = groupSplit[0].charAt(0).toUpperCase() + (groupSplit[1]? groupSplit[1].charAt(0).toUpperCase() : "");
   return (
     <div className={styles.group_name}>
         <div className={styles.group_short} style={{backgroundColor: bgColor}}>
