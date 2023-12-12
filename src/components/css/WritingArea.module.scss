@@ -15,7 +15,7 @@
         border-radius: 0.5rem;
         border: 1px solid #CCC;
         background-color: #FFF;
-        padding: 1rem 0 1rem 2rem;
+        padding: 1rem 0.4rem 1rem 2rem;
         display: flex;
         gap: 0.3rem;
 
@@ -36,5 +36,18 @@
             cursor: pointer;
         }
 
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .writing_area {
+        height: 22%;
+
+        .input_container {
+            padding-left: 1.3rem;
+            textarea {
+                font-size: 1.3rem;
+            }
+        }
     }
 }
