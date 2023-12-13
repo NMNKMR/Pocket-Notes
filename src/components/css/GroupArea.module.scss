@@ -30,6 +30,11 @@
         > div {
             padding-left: 1.5rem;
 
+            &:hover, &:active {
+                border-radius: 1rem;
+                background-color: rgba(97, 97, 97, 0.1)
+            }
+
             a {
                 text-decoration: none;
             }
